@@ -12,5 +12,12 @@ class Solution:
         return len(nums)+1
 
 
-s = Solution()
-print(s.firstMissingPositive([3, 4, -1, 1]))
+# s = Solution()
+# print(s.firstMissingPositive([3, 4, -1, 1]))
+N = 6
+x = list(range(1, N+1))
+sum = 0
+for i in x:
+    for j in x:
+        sum += max(i, j)
+print(sum/(N*N))
